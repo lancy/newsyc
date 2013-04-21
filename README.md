@@ -1,5 +1,11 @@
-## Welcome to news:yc on GitHub! ##
+## Hacker News iPhone Client Black Theme
 
-I should add more info here, but for right now feel free to just browse around. Check out the issues section for things you could try implementing if you want to contribute.
++ Beautiful Black Theme, redesign icon and user interface. 
++ Pocket Support
 
+Only for iPhone.
 
+Pull the repo, run the code or use the iPA file.
+
+## Contact me
+lancy1014@gmail.com
