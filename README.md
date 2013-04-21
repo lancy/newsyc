@@ -5,7 +5,7 @@
 
 Only for iPhone.
 
-Pull the repo, run the code or use the iPA file.
+Clone the repo, run the code or use the iPA file.
 
 ## Contact me
 lancy1014@gmail.com
