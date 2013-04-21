@@ -141,11 +141,14 @@
     // XXX: Fix iOS 6 bug with a tab bar controller in a navigation controller.
     [self setViewControllers:[self viewControllers]];
     [[self selectedViewController] setWantsFullScreenLayout:YES];
+    
+    if (![[NSUserDefaults standardUserDefaults] boolForKey:@"lancy-theme"]) {
+        if (![[NSUserDefaults standardUserDefaults] boolForKey:@"disable-orange"]) {
+            [[self tabBar] setSelectedImageTintColor:[UIColor mainOrangeColor]];
+        } else {
+            [[self tabBar] setSelectedImageTintColor:nil];
+        }
 
-    if (![[NSUserDefaults standardUserDefaults] boolForKey:@"disable-orange"]) {
-      [[self tabBar] setSelectedImageTintColor:[UIColor mainOrangeColor]];
-    } else {
-      [[self tabBar] setSelectedImageTintColor:nil];
     }
 }
 

@@ -107,6 +107,7 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [self customizeiPhoneTheme];
     window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 
     [HNNetworkActivityController setNetworkActivityBeganBlock:^{
@@ -301,6 +302,39 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
 
+}
+
+- (void)customizeiPhoneTheme
+{
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"lancy-theme"]) {
+        [[UIApplication sharedApplication]
+         setStatusBarStyle:UIStatusBarStyleBlackOpaque animated:NO];
+        
+        UIImage *navBarImage = [[UIImage imageNamed:@"nav_bar"] autorelease];
+        
+        [[UINavigationBar appearance] setBackgroundImage:navBarImage forBarMetrics:UIBarMetricsDefault];
+        
+        
+        UIImage *barButton = [[[UIImage imageNamed:@"nav_button"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 4, 0, 4)] autorelease];
+        
+        [[UIBarButtonItem appearance] setBackgroundImage:barButton forState:UIControlStateNormal
+                                              barMetrics:UIBarMetricsDefault];
+        
+        UIImage *backButton = [[[UIImage imageNamed:@"nav_backbutton"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 14, 0, 4)] autorelease];
+        
+        
+        [[UIBarButtonItem appearance] setBackButtonBackgroundImage:backButton forState:UIControlStateNormal
+                                                        barMetrics:UIBarMetricsDefault];
+        UIImage* tabBarBackground = [UIImage imageNamed:@"tabbar_bg.png"];
+        [[UITabBar appearance] setBackgroundImage:tabBarBackground];
+        
+        
+        [[UITabBar appearance] setSelectionIndicatorImage:[UIImage imageNamed:@"tabbar_active.png"]];
+        [[UITabBar appearance] setSelectedImageTintColor:[UIColor whiteColor]];
+    }
+    
+
+    
 }
 
 - (void)dealloc {

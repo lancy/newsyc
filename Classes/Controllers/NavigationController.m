@@ -41,11 +41,14 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    if (![[NSUserDefaults standardUserDefaults] boolForKey:@"disable-orange"]) {
-        [[self navigationBar] setTintColor:[UIColor mainOrangeColor]];
-    } else {
-        [[self navigationBar] setTintColor:nil];
+    if (![[NSUserDefaults standardUserDefaults] boolForKey:@"lancy-theme"]) {
+        if (![[NSUserDefaults standardUserDefaults] boolForKey:@"disable-orange"]) {
+            [[self navigationBar] setTintColor:[UIColor mainOrangeColor]];
+        } else {
+            [[self navigationBar] setTintColor:nil];
+        }
     }
+
 }
 
 // Why this isn't delegated by UIKit to the top view controller, I have no clue.

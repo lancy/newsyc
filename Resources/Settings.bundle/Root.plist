@@ -31,6 +31,16 @@
 			<string>PSToggleSwitchSpecifier</string>
 		</dict>
 		<dict>
+			<key>Type</key>
+			<string>PSToggleSwitchSpecifier</string>
+			<key>Title</key>
+			<string>Lancy Theme</string>
+			<key>Key</key>
+			<string>lancy-theme</string>
+			<key>DefaultValue</key>
+			<true/>
+		</dict>
+		<dict>
 			<key>FooterText</key>
 			<string>Enable this option to log out of Instapaper next time you launch news:yc.</string>
 			<key>Title</key>
