@@ -9,6 +9,7 @@
 #include <sys/types.h>
 #include <sys/sysctl.h>
 
+#import "PocketAPI.h"
 #import "AppDelegate.h"
 #import "SplitViewController.h"
 #import "NavigationController.h"
@@ -107,7 +108,6 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [self customizeiPhoneTheme];
     window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 
     [HNNetworkActivityController setNetworkActivityBeganBlock:^{
@@ -136,8 +136,8 @@
     [navigationController autorelease];
     
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+        [self customizeiPhoneTheme];
         [window setRootViewController:navigationController];
-        
         [HNObjectBodyRenderer setDefaultFontSize:13.0f];
     } else if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
         rightNavigationController = [[NavigationController alloc] init];
@@ -304,9 +304,23 @@
 
 }
 
+-(BOOL)application:(UIApplication *)application
+           openURL:(NSURL *)url
+ sourceApplication:(NSString *)sourceApplication
+        annotation:(id)annotation{
+    
+    if([[PocketAPI sharedAPI] handleOpenURL:url]){
+        return YES;
+    }else{
+        // if you handle your own custom url-schemes, do it here
+        return NO;
+    }
+    
+}
+
 - (void)customizeiPhoneTheme
 {
-    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"lancy-theme"]) {
+    if (![[NSUserDefaults standardUserDefaults] boolForKey:@"disable-black-theme"]) {
         [[UIApplication sharedApplication]
          setStatusBarStyle:UIStatusBarStyleBlackOpaque animated:NO];
         

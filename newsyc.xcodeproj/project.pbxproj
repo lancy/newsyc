@@ -168,6 +168,18 @@
 		BFACC37D1723DB1F004802DA /* seg_bar_divider_right@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BFACC3751723DB19004802DA /* seg_bar_divider_right@2x.png */; };
 		BFACC37E1723DB1F004802DA /* seg_bar_divider_left.png in Resources */ = {isa = PBXBuildFile; fileRef = BFACC3761723DB1B004802DA /* seg_bar_divider_left.png */; };
 		BFACC37F1723DB1F004802DA /* seg_bar_divider_left@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BFACC3771723DB1D004802DA /* seg_bar_divider_left@2x.png */; };
+		BFACC38517240C93004802DA /* icon114.png in Resources */ = {isa = PBXBuildFile; fileRef = BFACC38417240C8E004802DA /* icon114.png */; };
+		BFACC38717240CB6004802DA /* HNIcon57.png in Resources */ = {isa = PBXBuildFile; fileRef = BFACC38617240CB0004802DA /* HNIcon57.png */; };
+		BFACC3931724217D004802DA /* PocketAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = BFACC38B1724217D004802DA /* PocketAPI.m */; };
+		BFACC3941724217D004802DA /* PocketAPILogin.m in Sources */ = {isa = PBXBuildFile; fileRef = BFACC38D1724217D004802DA /* PocketAPILogin.m */; };
+		BFACC3951724217D004802DA /* PocketAPIOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = BFACC38F1724217D004802DA /* PocketAPIOperation.m */; };
+		BFACC3961724217D004802DA /* SFHFKeychainUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = BFACC3921724217D004802DA /* SFHFKeychainUtils.m */; };
+		BFACC399172421EA004802DA /* PocketActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = BFACC398172421E8004802DA /* PocketActivity.m */; };
+		BFACC39E1724249B004802DA /* pocket.png in Resources */ = {isa = PBXBuildFile; fileRef = BFACC39A1724247C004802DA /* pocket.png */; };
+		BFACC39F1724249B004802DA /* pocket@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BFACC39B17242483004802DA /* pocket@2x.png */; };
+		BFACC3A01724249B004802DA /* pocket~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = BFACC39C1724248A004802DA /* pocket~ipad.png */; };
+		BFACC3A11724249B004802DA /* pocket~ipad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BFACC39D17242493004802DA /* pocket~ipad@2x.png */; };
+		BFACC3A417242631004802DA /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFACC3A317242628004802DA /* Security.framework */; };
 		CBFCE7AD1398712F007A5DDD /* SearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBFCE7AB1398712F007A5DDD /* SearchController.m */; };
 		FA5F796B134CE04F002EEBCA /* InstapaperLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5F796A134CE04F002EEBCA /* InstapaperLoginController.m */; };
 		FA85248E1357BA73004E5A72 /* NSArray+Strings.m in Sources */ = {isa = PBXBuildFile; fileRef = FA85248D1357BA73004E5A72 /* NSArray+Strings.m */; };
@@ -196,7 +208,7 @@
 		7D148E64132D68B5008FBF32 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		7D17CA2D134AE22700763741 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		7D17CA2E134AE22700763741 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		7D1F988D1320CF720059EBBB /* newsyc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = newsyc.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D1F988D1320CF720059EBBB /* Hacker News.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hacker News.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D1F98911320CF720059EBBB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7D1F98931320CF720059EBBB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7D1F98951320CF720059EBBB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -415,6 +427,25 @@
 		BFACC3751723DB19004802DA /* seg_bar_divider_right@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "seg_bar_divider_right@2x.png"; sourceTree = "<group>"; };
 		BFACC3761723DB1B004802DA /* seg_bar_divider_left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = seg_bar_divider_left.png; sourceTree = "<group>"; };
 		BFACC3771723DB1D004802DA /* seg_bar_divider_left@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "seg_bar_divider_left@2x.png"; sourceTree = "<group>"; };
+		BFACC38417240C8E004802DA /* icon114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon114.png; sourceTree = "<group>"; };
+		BFACC38617240CB0004802DA /* HNIcon57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HNIcon57.png; sourceTree = "<group>"; };
+		BFACC3891724217D004802DA /* PocketAPI+NSOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PocketAPI+NSOperation.h"; sourceTree = "<group>"; };
+		BFACC38A1724217D004802DA /* PocketAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PocketAPI.h; sourceTree = "<group>"; };
+		BFACC38B1724217D004802DA /* PocketAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PocketAPI.m; sourceTree = "<group>"; };
+		BFACC38C1724217D004802DA /* PocketAPILogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PocketAPILogin.h; sourceTree = "<group>"; };
+		BFACC38D1724217D004802DA /* PocketAPILogin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PocketAPILogin.m; sourceTree = "<group>"; };
+		BFACC38E1724217D004802DA /* PocketAPIOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PocketAPIOperation.h; sourceTree = "<group>"; };
+		BFACC38F1724217D004802DA /* PocketAPIOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PocketAPIOperation.m; sourceTree = "<group>"; };
+		BFACC3901724217D004802DA /* PocketAPITypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PocketAPITypes.h; sourceTree = "<group>"; };
+		BFACC3911724217D004802DA /* SFHFKeychainUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFHFKeychainUtils.h; sourceTree = "<group>"; };
+		BFACC3921724217D004802DA /* SFHFKeychainUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFHFKeychainUtils.m; sourceTree = "<group>"; };
+		BFACC397172421E6004802DA /* PocketActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PocketActivity.h; sourceTree = "<group>"; };
+		BFACC398172421E8004802DA /* PocketActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PocketActivity.m; sourceTree = "<group>"; };
+		BFACC39A1724247C004802DA /* pocket.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pocket.png; sourceTree = "<group>"; };
+		BFACC39B17242483004802DA /* pocket@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pocket@2x.png"; sourceTree = "<group>"; };
+		BFACC39C1724248A004802DA /* pocket~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pocket~ipad.png"; sourceTree = "<group>"; };
+		BFACC39D17242493004802DA /* pocket~ipad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pocket~ipad@2x.png"; sourceTree = "<group>"; };
+		BFACC3A317242628004802DA /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		CBFCE7AA1398712F007A5DDD /* SearchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchController.h; sourceTree = "<group>"; };
 		CBFCE7AB1398712F007A5DDD /* SearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchController.m; sourceTree = "<group>"; };
 		FA5F7969134CE04F002EEBCA /* InstapaperLoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstapaperLoginController.h; sourceTree = "<group>"; };
@@ -430,6 +461,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFACC3A417242631004802DA /* Security.framework in Frameworks */,
 				598ED48D16E6AAA4003A6BC2 /* libHNKit.a in Frameworks */,
 				7D563FE416E456C000BDD2DB /* libxml2.dylib in Frameworks */,
 				7D75447C16A8C83B000AAB40 /* MobileCoreServices.framework in Frameworks */,
@@ -448,6 +480,8 @@
 		7D1F98821320CF720059EBBB = {
 			isa = PBXGroup;
 			children = (
+				BFACC38617240CB0004802DA /* HNIcon57.png */,
+				BFACC38417240C8E004802DA /* icon114.png */,
 				7D563FF016E45ADF00BDD2DB /* HNKit.xcodeproj */,
 				7D6B9E5B1347DF2E00CD923C /* Classes */,
 				7D6B9E361347DF2E00CD923C /* Resources */,
@@ -462,7 +496,7 @@
 		7D1F988E1320CF720059EBBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7D1F988D1320CF720059EBBB /* newsyc.app */,
+				7D1F988D1320CF720059EBBB /* Hacker News.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -470,6 +504,7 @@
 		7D1F98901320CF720059EBBB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BFACC3A317242628004802DA /* Security.framework */,
 				7D75447B16A8C83B000AAB40 /* MobileCoreServices.framework */,
 				7D148E64132D68B5008FBF32 /* libxml2.dylib */,
 				7D96C60C1426CC1B00A76F04 /* MessageUI.framework */,
@@ -493,6 +528,7 @@
 		7D6B9E361347DF2E00CD923C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				BFACC3A2172424A4004802DA /* pocket */,
 				BFACC34B1723C30A004802DA /* LancyThemes */,
 				7DD03DF014529EAF0007A069 /* Default */,
 				7D6B9E3B1347DF2E00CD923C /* Images */,
@@ -562,6 +598,7 @@
 		7D6B9E5B1347DF2E00CD923C /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				BFACC38817242175004802DA /* Pocket */,
 				7D6BAB7C14128A5700C24B8B /* Experimental */,
 				7D6B9E5C1347DF2E00CD923C /* Categories */,
 				7DCB8105134EC9AF00B521F2 /* Instapaper */,
@@ -679,6 +716,8 @@
 		7D85411F1640A03100C68F84 /* Sharing */ = {
 			isa = PBXGroup;
 			children = (
+				BFACC397172421E6004802DA /* PocketActivity.h */,
+				BFACC398172421E8004802DA /* PocketActivity.m */,
 				7D8541231640B86600C68F84 /* InstapaperSubmission.h */,
 				7D8541241640B86600C68F84 /* InstapaperSubmission.m */,
 				7D8541201640A08600C68F84 /* InstapaperActivity.h */,
@@ -859,12 +898,40 @@
 			name = LancyThemes;
 			sourceTree = "<group>";
 		};
+		BFACC38817242175004802DA /* Pocket */ = {
+			isa = PBXGroup;
+			children = (
+				BFACC3891724217D004802DA /* PocketAPI+NSOperation.h */,
+				BFACC38A1724217D004802DA /* PocketAPI.h */,
+				BFACC38B1724217D004802DA /* PocketAPI.m */,
+				BFACC38C1724217D004802DA /* PocketAPILogin.h */,
+				BFACC38D1724217D004802DA /* PocketAPILogin.m */,
+				BFACC38E1724217D004802DA /* PocketAPIOperation.h */,
+				BFACC38F1724217D004802DA /* PocketAPIOperation.m */,
+				BFACC3901724217D004802DA /* PocketAPITypes.h */,
+				BFACC3911724217D004802DA /* SFHFKeychainUtils.h */,
+				BFACC3921724217D004802DA /* SFHFKeychainUtils.m */,
+			);
+			path = Pocket;
+			sourceTree = "<group>";
+		};
+		BFACC3A2172424A4004802DA /* pocket */ = {
+			isa = PBXGroup;
+			children = (
+				BFACC39A1724247C004802DA /* pocket.png */,
+				BFACC39B17242483004802DA /* pocket@2x.png */,
+				BFACC39C1724248A004802DA /* pocket~ipad.png */,
+				BFACC39D17242493004802DA /* pocket~ipad@2x.png */,
+			);
+			name = pocket;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		7D1F988C1320CF720059EBBB /* newsyc */ = {
+		7D1F988C1320CF720059EBBB /* Hacker News */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7D1F98B41320CF720059EBBB /* Build configuration list for PBXNativeTarget "newsyc" */;
+			buildConfigurationList = 7D1F98B41320CF720059EBBB /* Build configuration list for PBXNativeTarget "Hacker News" */;
 			buildPhases = (
 				7D1F98891320CF720059EBBB /* Sources */,
 				7D1F988A1320CF720059EBBB /* Frameworks */,
@@ -875,9 +942,9 @@
 			dependencies = (
 				598ED48B16E6A9EA003A6BC2 /* PBXTargetDependency */,
 			);
-			name = newsyc;
+			name = "Hacker News";
 			productName = Orangey;
-			productReference = 7D1F988D1320CF720059EBBB /* newsyc.app */;
+			productReference = 7D1F988D1320CF720059EBBB /* Hacker News.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -906,7 +973,7 @@
 			);
 			projectRoot = "";
 			targets = (
-				7D1F988C1320CF720059EBBB /* newsyc */,
+				7D1F988C1320CF720059EBBB /* Hacker News */,
 			);
 		};
 /* End PBXProject section */
@@ -1023,6 +1090,12 @@
 				BFACC37D1723DB1F004802DA /* seg_bar_divider_right@2x.png in Resources */,
 				BFACC37E1723DB1F004802DA /* seg_bar_divider_left.png in Resources */,
 				BFACC37F1723DB1F004802DA /* seg_bar_divider_left@2x.png in Resources */,
+				BFACC38517240C93004802DA /* icon114.png in Resources */,
+				BFACC38717240CB6004802DA /* HNIcon57.png in Resources */,
+				BFACC39E1724249B004802DA /* pocket.png in Resources */,
+				BFACC39F1724249B004802DA /* pocket@2x.png in Resources */,
+				BFACC3A01724249B004802DA /* pocket~ipad.png in Resources */,
+				BFACC3A11724249B004802DA /* pocket~ipad@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1093,6 +1166,11 @@
 				7DBD4CB2169FC52E00938C54 /* UIColor+Orange.m in Sources */,
 				7D75447616A636DB000AAB40 /* BodyTextView.m in Sources */,
 				7D2B8B8816ADCEF50072D730 /* PingController.m in Sources */,
+				BFACC3931724217D004802DA /* PocketAPI.m in Sources */,
+				BFACC3941724217D004802DA /* PocketAPILogin.m in Sources */,
+				BFACC3951724217D004802DA /* PocketAPIOperation.m in Sources */,
+				BFACC3961724217D004802DA /* SFHFKeychainUtils.m in Sources */,
+				BFACC399172421EA004802DA /* PocketActivity.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1122,6 +1200,7 @@
 				HEADER_SEARCH_PATHS = "/usr/include/libxml2/**";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "Hacker News";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1141,6 +1220,7 @@
 				HEADER_SEARCH_PATHS = "/usr/include/libxml2/**";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PRODUCT_NAME = "Hacker News";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "3687A6A6-7C3E-43E4-A0FF-B77FB0A0310C";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1166,7 +1246,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1189,7 +1269,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};
@@ -1207,7 +1287,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7D1F98B41320CF720059EBBB /* Build configuration list for PBXNativeTarget "newsyc" */ = {
+		7D1F98B41320CF720059EBBB /* Build configuration list for PBXNativeTarget "Hacker News" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7D1F98B51320CF720059EBBB /* Debug */,

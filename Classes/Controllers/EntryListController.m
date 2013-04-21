@@ -99,11 +99,12 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-
-    if (![[NSUserDefaults standardUserDefaults] boolForKey:@"disable-orange"]) {
-        [refreshControl setTintColor:[UIColor lightOrangeColor]];
-    } else {
-        [refreshControl setTintColor:nil];
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"disable-black-theme"]) {        
+        if (![[NSUserDefaults standardUserDefaults] boolForKey:@"disable-orange"]) {
+            [refreshControl setTintColor:[UIColor lightOrangeColor]];
+        } else {
+            [refreshControl setTintColor:nil];
+        }
     }
 
     [self deselectWithAnimation:YES];

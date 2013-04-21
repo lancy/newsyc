@@ -22,7 +22,7 @@
 		</dict>
 		<dict>
 			<key>DefaultValue</key>
-			<false/>
+			<true/>
 			<key>Key</key>
 			<string>disable-orange</string>
 			<key>Title</key>
@@ -34,11 +34,11 @@
 			<key>Type</key>
 			<string>PSToggleSwitchSpecifier</string>
 			<key>Title</key>
-			<string>Lancy Theme</string>
+			<string>Disable Black Theme</string>
 			<key>Key</key>
-			<string>lancy-theme</string>
+			<string>disable-black-theme</string>
 			<key>DefaultValue</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>FooterText</key>

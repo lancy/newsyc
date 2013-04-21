@@ -217,7 +217,7 @@
         [tableView deselectRowAtIndexPath:[tableView indexPathForSelectedRow] animated:YES];
     }
     
-    if (![[NSUserDefaults standardUserDefaults] boolForKey:@"lancy-theme"]) {
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"disable-black-theme"]) {
         if (![[NSUserDefaults standardUserDefaults] boolForKey:@"disable-orange"]) {
             [searchBar setTintColor:[UIColor mainOrangeColor]];
             [facetControl setTintColor:[UIColor mainOrangeColor]];

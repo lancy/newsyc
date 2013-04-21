@@ -76,13 +76,15 @@
     style = style_;
     
     if (style == kEntryActionsViewStyleDefault) {
-        if (![[NSUserDefaults standardUserDefaults] boolForKey:@"lancy-theme"]) {
+        if ([[NSUserDefaults standardUserDefaults] boolForKey:@"disable-black-theme"]) {
             [self setBackgroundImage:nil forToolbarPosition:UIToolbarPositionAny barMetrics:UIBarMetricsDefault];
             [self setTintColor:nil];
         }
     } else if (style == kEntryActionsViewStyleOrange) {
-        [self setBackgroundImage:nil forToolbarPosition:UIToolbarPositionAny barMetrics:UIBarMetricsDefault];
-        [self setTintColor:[UIColor mainOrangeColor]];
+        if ([[NSUserDefaults standardUserDefaults] boolForKey:@"disable-black-theme"]) {
+            [self setBackgroundImage:nil forToolbarPosition:UIToolbarPositionAny barMetrics:UIBarMetricsDefault];
+            [self setTintColor:[UIColor mainOrangeColor]];
+        }
     } else if (style == kEntryActionsViewStyleLight) {
         UIImage *backgroundImage = [[UIImage imageNamed:@"toolbar-expanded.png"] stretchableImageWithLeftCapWidth:0 topCapHeight:0];
         [self setBackgroundImage:backgroundImage forToolbarPosition:UIToolbarPositionAny barMetrics:UIBarMetricsDefault];

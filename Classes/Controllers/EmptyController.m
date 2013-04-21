@@ -47,7 +47,7 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    if (![[NSUserDefaults standardUserDefaults] boolForKey:@"lancy-theme"]) {
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"disable-black-theme"]) {
         [tableView setOrange:![[NSUserDefaults standardUserDefaults] boolForKey:@"disable-orange"]];
         
         if (![[NSUserDefaults standardUserDefaults] boolForKey:@"disable-orange"]) {

@@ -142,7 +142,7 @@
     [self setViewControllers:[self viewControllers]];
     [[self selectedViewController] setWantsFullScreenLayout:YES];
     
-    if (![[NSUserDefaults standardUserDefaults] boolForKey:@"lancy-theme"]) {
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"disable-black-theme"]) {
         if (![[NSUserDefaults standardUserDefaults] boolForKey:@"disable-orange"]) {
             [[self tabBar] setSelectedImageTintColor:[UIColor mainOrangeColor]];
         } else {

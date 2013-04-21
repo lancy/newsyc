@@ -41,7 +41,7 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    if (![[NSUserDefaults standardUserDefaults] boolForKey:@"lancy-theme"]) {
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"disable-black-theme"]) {
         if (![[NSUserDefaults standardUserDefaults] boolForKey:@"disable-orange"]) {
             [[self navigationBar] setTintColor:[UIColor mainOrangeColor]];
         } else {
