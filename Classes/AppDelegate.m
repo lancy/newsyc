@@ -334,6 +334,20 @@
 
         [[UITabBar appearance] setSelectionIndicatorImage:[UIImage imageNamed:@"tabbar_activesegment.png"]];
         [[UITabBar appearance] setSelectedImageTintColor:[UIColor whiteColor]];
+        
+        [[UISearchBar appearance] setBackgroundImage:navBarImage];
+        
+        UIImage *segBarButton = [[UIImage imageNamed:@"seg_barbutton"] autorelease];
+        UIImage *segBarButtonHighLighted = [[UIImage imageNamed:@"seg_barbutton_highlighted"] autorelease];
+        UIImage *segBarDividerLeft = [[UIImage imageNamed:@"seg_bar_divider_left"] autorelease];
+        UIImage *segBarDividerRight = [[UIImage imageNamed:@"seg_bar_divider_right"] autorelease];
+        [[UISegmentedControl appearance] setBackgroundImage:segBarButton forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+        [[UISegmentedControl appearance] setBackgroundImage:segBarButtonHighLighted forState:UIControlStateSelected barMetrics:UIBarMetricsDefault];
+        [[UISegmentedControl appearance] setDividerImage:segBarDividerLeft forLeftSegmentState:UIControlStateNormal rightSegmentState:UIControlStateSelected barMetrics:UIBarMetricsDefault];
+        [[UISegmentedControl appearance] setDividerImage:segBarDividerRight forLeftSegmentState:UIControlStateSelected rightSegmentState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+        
+        [[UIToolbar appearance] setBackgroundImage:navBarImage forToolbarPosition:UIToolbarPositionAny barMetrics:UIBarMetricsDefault];
+
     }
     
 

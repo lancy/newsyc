@@ -217,15 +217,18 @@
         [tableView deselectRowAtIndexPath:[tableView indexPathForSelectedRow] animated:YES];
     }
     
-    if (![[NSUserDefaults standardUserDefaults] boolForKey:@"disable-orange"]) {
-        [searchBar setTintColor:[UIColor mainOrangeColor]];
-        [facetControl setTintColor:[UIColor mainOrangeColor]];
-        [coloredView setTintColor:[UIColor orangeColor]];
-    } else {
-        [searchBar setTintColor:nil];
-        [facetControl setTintColor:nil];
-        [coloredView setTintColor:nil];
+    if (![[NSUserDefaults standardUserDefaults] boolForKey:@"lancy-theme"]) {
+        if (![[NSUserDefaults standardUserDefaults] boolForKey:@"disable-orange"]) {
+            [searchBar setTintColor:[UIColor mainOrangeColor]];
+            [facetControl setTintColor:[UIColor mainOrangeColor]];
+            [coloredView setTintColor:[UIColor orangeColor]];
+        } else {
+            [searchBar setTintColor:nil];
+            [facetControl setTintColor:nil];
+            [coloredView setTintColor:nil];
+        }
     }
+    
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {

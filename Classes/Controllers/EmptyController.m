@@ -47,12 +47,14 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    [tableView setOrange:![[NSUserDefaults standardUserDefaults] boolForKey:@"disable-orange"]];
-    
-    if (![[NSUserDefaults standardUserDefaults] boolForKey:@"disable-orange"]) {
-        [emptyLabel setTextColor:[UIColor grayColor]];
-    } else {
-        [emptyLabel setTextColor:[UIColor grayColor]];
+    if (![[NSUserDefaults standardUserDefaults] boolForKey:@"lancy-theme"]) {
+        [tableView setOrange:![[NSUserDefaults standardUserDefaults] boolForKey:@"disable-orange"]];
+        
+        if (![[NSUserDefaults standardUserDefaults] boolForKey:@"disable-orange"]) {
+            [emptyLabel setTextColor:[UIColor grayColor]];
+        } else {
+            [emptyLabel setTextColor:[UIColor grayColor]];
+        }
     }
 }
 

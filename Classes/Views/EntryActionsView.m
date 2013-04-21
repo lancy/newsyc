@@ -76,8 +76,10 @@
     style = style_;
     
     if (style == kEntryActionsViewStyleDefault) {
-        [self setBackgroundImage:nil forToolbarPosition:UIToolbarPositionAny barMetrics:UIBarMetricsDefault];
-        [self setTintColor:nil];
+        if (![[NSUserDefaults standardUserDefaults] boolForKey:@"lancy-theme"]) {
+            [self setBackgroundImage:nil forToolbarPosition:UIToolbarPositionAny barMetrics:UIBarMetricsDefault];
+            [self setTintColor:nil];
+        }
     } else if (style == kEntryActionsViewStyleOrange) {
         [self setBackgroundImage:nil forToolbarPosition:UIToolbarPositionAny barMetrics:UIBarMetricsDefault];
         [self setTintColor:[UIColor mainOrangeColor]];

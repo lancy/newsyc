@@ -113,11 +113,14 @@
         [webview loadRequest:[request autorelease]];
     }
     
-    if (![[NSUserDefaults standardUserDefaults] boolForKey:@"disable-orange"]) {
-        [toolbar setTintColor:[UIColor mainOrangeColor]];
-    } else {
-        [toolbar setTintColor:nil];
+    if (![[NSUserDefaults standardUserDefaults] boolForKey:@"lancy-theme"]) {
+        if (![[NSUserDefaults standardUserDefaults] boolForKey:@"disable-orange"]) {
+            [toolbar setTintColor:[UIColor mainOrangeColor]];
+        } else {
+            [toolbar setTintColor:nil];
+        }
     }
+    
 }
 
 - (void)viewDidLoad {

@@ -59,9 +59,10 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    
-    [tableView setOrange:![[NSUserDefaults standardUserDefaults] boolForKey:@"disable-orange"]];
-    [tableView deselectRowAtIndexPath:[tableView indexPathForSelectedRow] animated:YES];
+    if (![[NSUserDefaults standardUserDefaults] boolForKey:@"lancy-theme"]) {
+        [tableView setOrange:![[NSUserDefaults standardUserDefaults] boolForKey:@"disable-orange"]];
+        [tableView deselectRowAtIndexPath:[tableView indexPathForSelectedRow] animated:YES];
+    }
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)table {
