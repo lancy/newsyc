@@ -310,26 +310,29 @@
         [[UIApplication sharedApplication]
          setStatusBarStyle:UIStatusBarStyleBlackOpaque animated:NO];
         
-        UIImage *navBarImage = [[UIImage imageNamed:@"nav_bar"] autorelease];
+        UIImage *navBarImage = [[UIImage imageNamed:@"nav_bar_bg"] autorelease];
         
         [[UINavigationBar appearance] setBackgroundImage:navBarImage forBarMetrics:UIBarMetricsDefault];
         
         
-        UIImage *barButton = [[[UIImage imageNamed:@"nav_button"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 4, 0, 4)] autorelease];
-        
+        UIImage *barButton = [[[UIImage imageNamed:@"nav_bar_button"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 4, 0, 4)] autorelease];
+        UIImage *barButtonPressed= [[[UIImage imageNamed:@"nav_bar_button_pressed"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 4, 0, 4)] autorelease];
         [[UIBarButtonItem appearance] setBackgroundImage:barButton forState:UIControlStateNormal
                                               barMetrics:UIBarMetricsDefault];
-        
-        UIImage *backButton = [[[UIImage imageNamed:@"nav_backbutton"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 14, 0, 4)] autorelease];
-        
-        
+        [[UIBarButtonItem appearance] setBackgroundImage:barButtonPressed forState:UIControlStateHighlighted
+                                              barMetrics:UIBarMetricsDefault];
+
+        UIImage *backButton = [[[UIImage imageNamed:@"nav_bar_back"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 14, 0, 4)] autorelease];
+        UIImage *backButtonPressed = [[[UIImage imageNamed:@"nav_bar_back_pressed"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 14, 0, 4)] autorelease];
         [[UIBarButtonItem appearance] setBackButtonBackgroundImage:backButton forState:UIControlStateNormal
                                                         barMetrics:UIBarMetricsDefault];
+        [[UIBarButtonItem appearance] setBackButtonBackgroundImage:backButtonPressed forState:UIControlStateHighlighted
+                                                        barMetrics:UIBarMetricsDefault];
+        
         UIImage* tabBarBackground = [UIImage imageNamed:@"tabbar_bg.png"];
         [[UITabBar appearance] setBackgroundImage:tabBarBackground];
-        
-        
-        [[UITabBar appearance] setSelectionIndicatorImage:[UIImage imageNamed:@"tabbar_active.png"]];
+
+        [[UITabBar appearance] setSelectionIndicatorImage:[UIImage imageNamed:@"tabbar_activesegment.png"]];
         [[UITabBar appearance] setSelectedImageTintColor:[UIColor whiteColor]];
     }
     
